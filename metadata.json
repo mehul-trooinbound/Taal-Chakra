@@ -1,0 +1,6 @@
+{
+  "name": "TaalChakra - Gujarati Garba Songs Player, Singers & Navratri Studio",
+  "description": "Listen to in-app Gujarati Garba songs by Kirtidan Gadhvi, Hemant Chauhan, Kinjal Dave & Falguni Pathak, synthesize Dhol rhythms, learn Dodhiya footwork, and celebrate Navratri with full Gujarati language support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

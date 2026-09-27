@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Rozha One", serif;
+  --font-folk: "Yatra One", cursive;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+/* Custom scrollbar and subtle festive ambience */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f091c;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b1f5c;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
+
+/* Diya pulse animation */
+@keyframes diyaPulse {
+  0%, 100% {
+    opacity: 0.88;
+    transform: scale(1);
+    filter: drop-shadow(0 0 14px rgba(245, 158, 11, 0.55));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 26px rgba(245, 158, 11, 0.85));
+  }
+}
+
+/* Mirror work shimmer animation */
+@keyframes mirrorShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Beat pulse ring animation */
+@keyframes beatPulseRing {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.diya-glow {
+  animation: diyaPulse 2.8s ease-in-out infinite;
+}
+
+.beat-pulse {
+  animation: beatPulseRing 0.6s ease-in-out infinite;
+}
+
+.mirror-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: mirrorShimmer 4s infinite linear;
+}
+
+/* Smooth touch behavior */
+@media (max-width: 768px) {
+  .touch-scroll-x {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  .touch-snap-item {
+    scroll-snap-align: start;
+  }
+}
+
